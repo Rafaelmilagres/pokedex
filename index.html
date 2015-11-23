@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pokédex</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="http://img04.deviantart.net/44f8/i/2015/088/e/0/poke_ball_icon__3f1__by_epe-d8nkpxf.png" rel="icon" type="image/x-icon" />
+	<meta name="viewport" content="width=1000, initial-scale=1">
+</head>
+<body>
+<div class="bg"></div>
+<div class="pokedex">
+
+	<div class="border-back-left">
+		<div class="back-left">
+			<div class="top-left">
+				<div class="blue_circle">
+					<div class="voice">
+						<div class="luz"></div>
+					</div>
+				</div>
+				<div class="three-circle">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+				</div>
+			</div>
+
+			<div class="content-left">
+				<svg>
+					<path d="M1 105 C 1 105, 230 115, 267 45" stroke-width="10px" stroke="#b61b17" fill="transparent"/>
+					<path d="M265 50 C 280 25, 320 13, 478 13" stroke-width="10px" stroke="#b61b17" fill="transparent"/>
+
+					<path d="M0 100 C 0 100, 230 110, 260 45" stroke-width="2px" stroke="black" fill="transparent"/>
+					<path d="M260 45 C 290 20, 320 8, 479 8" stroke-width="2px" stroke="black" fill="transparent"/>
+
+					<path d="M0 110 C 0 110, 230 120, 270 50" stroke-width="2px" stroke="black" fill="transparent"/>
+					<path d="M270 50 C 290 30, 320 18, 478 18" stroke-width="2px" stroke="black" fill="transparent"/>
+
+	  				<g stroke="black" >
+						<line x1="100" y1="108" x2="110" y2="98" stroke-width="2" />
+						<line x1="108" y1="108" x2="118" y2="98" stroke-width="2" />
+						<line x1="116" y1="107" x2="126" y2="97" stroke-width="2" />
+						<line x1="124" y1="106" x2="135" y2="96" stroke-width="2" />
+						<line x1="132" y1="105" x2="143" y2="95" stroke-width="2" />
+						<line x1="140" y1="104" x2="151" y2="93" stroke-width="2" />
+
+						<line x1="310" y1="30" x2="320" y2="18" stroke-width="2" />
+						<line x1="318" y1="27" x2="328" y2="17" stroke-width="2" />
+						<line x1="326" y1="26" x2="336" y2="16" stroke-width="2" />
+						<line x1="334" y1="25" x2="344" y2="15" stroke-width="2" />
+						<line x1="342" y1="24" x2="352" y2="13" stroke-width="2" />
+						<line x1="350" y1="23" x2="360" y2="12" stroke-width="2" />
+					</g>
+				</svg>
+
+				<div class="screen_block">
+					<div class="screen_border_out">
+						<div class="screen_border">
+							<div class="screen brilho">
+								<div class="screen_help">
+									<h3>Pokedex - Help</h3>
+									<p>Vertical directional buttons: Navigation between Pokémon.</p>
+									<p>Horizontal directional buttons: Navigation between the pages of the selected Pokémon.</p>
+									<p></p>
+									<p>To exit, click again on the help button.</p>
+								</div>
+								<div class="shadow"></div>
+								<div class="top">
+									<span class="name">Pokemon</span>
+									<span class="muted"></span>
+									<div class="types"></div>
+								</div>
+								<div class="screens">
+									<div class="screen1">
+										<div class="img">
+											<img id="pokeball" src="imgs/pokebola.png">
+										</div>
+										<div class="infos">
+											<span class="hp">HP: </span>
+											<span class="attack">Attack: </span>
+											<span class="defense">Defense: </span>
+											<span class="speed">Speed: </span>
+										</div>
+									</div>
+									<div class="screen2">
+										<div class="description">
+											Description:
+											<span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="lines">
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+							</div>
+
+							<div class="help">
+								<i class="fa fa-question"></i>
+							</div>
+							<div class="sound">
+								<i class="fa fa-music"></i>
+							</div>
+
+							<div class="top cleafix">
+								<div class="circle1 selected"></div>
+								<div class="circle2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom_block">	
+					<div class="logo">
+						Pokédex
+						<span>V0.1 Copyright &copy</span>
+					</div>
+
+					<div class="directions">
+						<div class="btn top_button"></div>
+						<div class="btn left_button"></div>
+						<div class="btn right_button"></div>
+						<div class="btn bottom_button"></div>
+						<div class="center_button">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="center">
+				<div class="line-top1"></div>
+				<div class="line-top2"></div>
+				<div class="vertical-line-top1"></div>
+				<div class="vertical-line-top2"></div>
+
+
+				<div class="line-bottom1"></div>
+				<div class="line-bottom2"></div>
+				<div class="vertical-line-bottom1"></div>
+				<div class="vertical-line-bottom2"></div>
+
+				<div class="circle-bottom"></div>
+			</div>
+		</div>
+	</div>
+	<div class="back-right-block">
+		<div class="back-right-back zindex"></div>
+		<div class="back-right">
+			<div class="list_pokemon_block">
+				<div class="list_pokemon">
+					<p>
+						Loading
+						<span>.</span>
+						<span class="hidden">.</span>
+						<span class="hidden">.</span>
+					</p>
+				</div>
+			</div>
+
+			<svg>
+			  	<rect fill="#fb0505" stroke-width="0" stroke-opacity="null" x="300.5" y="21" width="160.14823" height="100" id="svg_7" stroke="black"/>
+			  	<rect fill="#fb0505" stroke-width="0" stroke-opacity="null" x="225.5" y="76" width="77.14823" height="30" id="svg_7" stroke="black"/>
+			  	<rect fill="#fb0505" stroke-width="0" stroke-opacity="null" x="265.5" y="46" width="77.14823" height="30" id="svg_7" stroke="black"/>
+
+				<path class="getHide hide" d="M20 121 C 78 123, 240 120, 279 59" stroke-width="10px" stroke="#b61b17" fill="transparent"/>
+				<path class="getHide hide" d="M277 60 C 300 42, 320 35, 445 31" stroke-width="10px" stroke="#b61b17" fill="transparent"/>
+				<path id="svg_1" fill="transparent" stroke="#fb0505" stroke-width="16px" d="m1,109c0,0 229,10 266,-60"/>
+			  	<path id="svg_2" fill="transparent" stroke="#fb0505" stroke-width="16px" d="m265,55c15,-25 55,-37 213,-38"/>
+			  	<path id="svg_3" fill="transparent" stroke="black" stroke-width="2px" d="m0,100c0,0 230,10 260,-55"/>
+			  	<path id="svg_4" fill="transparent" stroke="black" stroke-width="2px" d="m260,44.53489c30,-25 60,-37 240,-37"/>
+			  	<path id="svg_5" class="getHide hide" fill="transparent" stroke="black" stroke-width="2px" d="m15,115c0,0 215,10 260,-60"/>
+			  	<path id="svg_6" class="getHide hide" fill="transparent" stroke="black" stroke-width="2px" d="m275,55c10,-15 50,-27 170,-30"/>
+			  	<ellipse rx="0.5" id="svg_9" cy="22" cx="22" stroke-width="1.5" stroke="#000" fill="#fff"/>
+			  	
+			  	
+
+
+
+				<path class="getHide hide" d="M20 116 C 20 550, 20 550, 21 554" stroke-width="10px" stroke="#b61b17" fill="transparent"/>
+			  	<g class="getHide hide" stroke="#b61b17">
+					<line x1="22" y1="550" x2="20" y2="557" stroke-width="8" />
+			  	</g>
+				<path class="getHide hide" d="M15 540 C 15 550, 15 560, 30 560" stroke-width="2px" stroke="black" fill="transparent"/>
+				<path class="getHide hide" id="svg_4" fill="transparent" stroke="black" stroke-width="2px" d="m279,66c30,-25 60,-25 165,-30"/>
+			  	<path class="getHide hide" fill="transparent" stroke="black" stroke-width="2px" d="m25,125c0,0 195,10 255,-60"/>
+
+
+			  	<g class="getHide hide" stroke="black" >
+							<line x1="100" y1="125" x2="110" y2="112" stroke-width="2" />
+							<line x1="108" y1="124" x2="118" y2="112" stroke-width="2" />
+							<line x1="116" y1="124" x2="126" y2="111" stroke-width="2" />
+							<line x1="124" y1="123" x2="135" y2="110" stroke-width="2" />
+							<line x1="132" y1="122" x2="143" y2="109" stroke-width="2" />
+							<line x1="140" y1="121" x2="151" y2="108" stroke-width="2" />
+
+							<line x1="310" y1="50" x2="320" y2="35" stroke-width="2" />
+							<line x1="318" y1="48" x2="328" y2="35" stroke-width="2" />
+							<line x1="326" y1="46" x2="336" y2="32" stroke-width="2" />
+							<line x1="334" y1="45" x2="344" y2="31" stroke-width="2" />
+							<line x1="342" y1="44" x2="352" y2="30" stroke-width="2" />
+							<line x1="350" y1="43" x2="360" y2="30" stroke-width="2" />
+
+							<line x1="15" y1="115" x2="25" y2="125" stroke-width="2" />
+						</g>
+
+			  	<g class="getHide hide" stroke="black">
+					<line x1="15" y1="115" x2="15" y2="540" stroke-width="2" />
+					<line x1="30" y1="560" x2="445" y2="560" stroke-width="2" />
+					<line x1="445" y1="25" x2="445" y2="560" stroke-width="2" />
+
+					<line x1="25" y1="125" x2="25" y2="560" stroke-width="2" />
+			  	</g>
+			</svg>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70499837-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+	play = true;
+
+	// toca a abertura de pokemon
+	op = new Audio('sounds/op1.mp3');
+	op.loop = true;
+	op.play();
+
+
+	var pokemons;
+	var pokemon_html = "<div id=\"{id}\" class=\"pokemon\"><span class=\"id\">{id}</span><span class=\"nome\">{nome}</span></div>";
+	var type_html = '<span class="type {type}">{type}</span>';
+	var url = 'http://pokeapi.co//api/v1/pokedex/1/';
+	var url_sprite = 'http://assets5.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png';
+	var infos;
+	var description;
+	var sprite;
+
+
+	// ao clicar no botão right_button e left_button, altera a página de vizualização do pokemon na tela
+	document.getElementsByClassName('right_button')[0].onclick = right_button;
+	function right_button(){
+		document.getElementsByClassName('screens')[0].style.margin = "0 0 0 -100%";
+		document.querySelector('.top .circle1').classList.remove('selected');
+		document.querySelector('.top .circle2').classList.add('selected');
+	};
+
+	document.getElementsByClassName('left_button')[0].onclick = left_button;
+	function left_button(){
+		document.getElementsByClassName('screens')[0].style.margin = "0 0 0 0";
+		document.querySelector('.top .circle1').classList.add('selected');
+		document.querySelector('.top .circle2').classList.remove('selected');
+	};
+
+	// função para
+	document.getElementsByClassName('sound')[0].onclick = function(){
+		play = !play;
+		op.muted = !play;
+	  	window.speechSynthesis.cancel();
+	}
+
+
+	// ao clicar no botão top_button e bottom_button, altera o pokemon vizualizado
+	document.getElementsByClassName('top_button')[0].onclick = function(){
+		id_str = document.querySelector('.pokemon.selected').id;
+		id = parseInt(id_str);
+
+		if(id > 10001){
+			id = parseInt(id_str) - 1;
+			id_str = ('000' + id).slice(-5);
+		}else{
+			if (id == 10001) {
+				id = 718;
+			}else{
+				id = parseInt(id_str) - 1;
+			}	
+			id_str = ('000' + id).slice(-3);
+		}
+		
+		if(id > 0){
+			resetaScreen();
+			consultaPokemon(id_str);
+			document.getElementById(id_str).classList.add('selected');
+			document.getElementsByTagName('img')[0].classList.remove('hidden');
+		}
+	};	
+	document.getElementsByClassName('bottom_button')[0].onclick = function(){
+		id_str = document.querySelector('.pokemon.selected').id;
+		id = parseInt(id_str);
+		if(id < 718){
+			id = parseInt(id_str) + 1;
+			id_str = ('000' + id).slice(-3);
+		}else{
+			if (id == 718) {
+				id = 10001;
+			}else{
+				id = parseInt(id_str) + 1;
+			}	
+			id_str = ('000' + id).slice(-5);
+		}
+
+		
+		if(id > 0){
+			resetaScreen();
+			consultaPokemon(id_str);
+			document.getElementById(id_str).classList.add('selected');
+			document.getElementsByTagName('img')[0].classList.remove('hidden');
+		}
+	};	
+
+
+
+	// efeito de loading enquanto não carrega a lista de pokemon
+	spans = document.querySelectorAll(".list_pokemon span");
+	interval = setInterval(function(){
+		span = document.querySelector("span.hidden");
+		if(span != null)
+			span.classList.remove("hidden");
+		else
+			for(s=0; s<spans.length-1;s++)
+				spans[s].classList.add("hidden");
+	}, 1000);
+
+
+	// efeito de botão pressionado para o direcional
+	elements = document.getElementsByClassName("btn");
+	for(e in elements){
+		elements[e].onmousedown = function(){
+			this.classList.add("clicked");
+		}
+
+		elements[e].onmouseup = function(){
+			this.classList.remove("clicked")
+		}
+		elements[e].onmouseout = function(){
+			this.classList.remove("clicked")
+		}
+	}
+
+
+	// exibe a tela de ajuda ao clicar no botão de ajuda
+	clicou = false;
+	posicao_antiga = "";
+	document.getElementsByClassName('help')[0].onclick = function(){
+		clicou = !clicou;
+		if(clicou == true){
+			posicao_antiga = document.getElementsByClassName('screens')[0].style.margin;
+			document.getElementsByClassName('right_button')[0].onclick = null;
+			document.getElementsByClassName('left_button')[0].onclick = null;
+			document.getElementsByClassName('screen_help')[0].style.left = "0";
+			document.getElementsByClassName('screens')[0].style.margin = "0 0 0 100%";
+			document.getElementsByClassName('top')[0].style.margin = "0 0 0 100%";
+		}else{
+			document.getElementsByClassName('right_button')[0].onclick = right_button;
+			document.getElementsByClassName('left_button')[0].onclick = left_button;
+			document.getElementsByClassName('screen_help')[0].style.left = "-320px";
+			document.getElementsByClassName('screens')[0].style.margin = posicao_antiga;
+			document.getElementsByClassName('top')[0].style.margin = "0 0 0 0";
+		}
+	}
+
+	// efeito de pressionado para o botão de ajuda
+	document.getElementsByClassName('help')[0].onmousedown = function(){
+		this.classList.add("selected");
+	}
+	document.getElementsByClassName('help')[0].onmouseup = function(){
+		this.classList.remove("selected")
+	}
+	document.getElementsByClassName('help')[0].onmouseout = function(){
+		this.classList.remove("selected")
+	}
+
+
+	// efeito de pressionado para o botão de musica
+	document.getElementsByClassName('sound')[0].onmousedown = function(){
+		this.classList.add("selected");
+	}
+	document.getElementsByClassName('sound')[0].onmouseup = function(){
+		this.classList.remove("selected")
+	}
+	document.getElementsByClassName('sound')[0].onmouseout = function(){
+		this.classList.remove("selected")
+	}
+
+	function resetaScreen(){
+		// apaga a imgem do pokemon anterior
+		img = document.getElementById('img');
+		document.getElementsByClassName('img')[0].removeChild(img);
+
+		// reseta as informações anteriores
+		document.getElementsByClassName('name')[0].innerHTML = "Pokémon";
+		document.getElementsByClassName('hp')[0].innerHTML = "HP: ";
+		document.getElementsByClassName('attack')[0].innerHTML = "Attack: ";
+		document.getElementsByClassName('defense')[0].innerHTML = "Defense: ";
+		document.getElementsByClassName('speed')[0].innerHTML = "Speed: ";
+		document.getElementsByClassName('types')[0].innerHTML = "";
+		document.getElementsByClassName('description')[0].innerHTML = "Descrition: <span></span>";
+
+		/*console.log(document.getElementsByClassName("selected").length);*/
+		if(document.querySelectorAll(".pokemon.selected").length > 0)
+			document.querySelector(".pokemon.selected").classList.remove("selected");
+	}
+
+	// adiciona o efeito clicavel no pokemon da lista
+	function adicionaClick(){
+		elementos = document.getElementsByClassName("pokemon");
+		for(e in elementos){
+			elementos[e].onclick = function(e){
+				e.stopPropagation();
+				resetaScreen();
+
+				// chama a função de busca do pokemon
+				consultaPokemon(this.id);
+				document.getElementsByTagName('img')[0].classList.remove('hidden');
+
+				this.classList.add("selected");
+			}
+		}
+	}
+
+	/* obtem a lista contendo todos os pokemons */
+	function consultaListaPokemons(url) {
+		// verifica se já possui os pokemons armazenados no localStorage
+		if(localStorage['pokemons']){
+			pokemons = JSON.parse(localStorage['pokemons'])
+			insere_pokemons(pokemons);
+			return;
+		}
+
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+				pokemons = JSON.parse(xmlHttp.responseText);
+				localStorage['pokemons'] = xmlHttp.responseText;
+				insere_pokemons(pokemons);
+			}
+		}
+		xmlHttp.open( "GET", url, true );
+		xmlHttp.send( null );
+	}
+	consultaListaPokemons(url);
+
+
+
+	/* obtem um unico pokemon */
+	function consultaPokemon(identifier) {
+		// adiciona o pokemon no localStorage?
+		/*if(localStorage['pokemons']){
+			pokemons = JSON.parse(localStorage['pokemons'])
+			insere_pokemons(pokemons);
+			return;
+		}
+		*/
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+				infos = JSON.parse(xmlHttp.responseText);
+
+				// insere as informações obtidas
+				var img = new Image();
+				if(identifier.length<=3)
+					img.src = url_sprite.replace("{id}", identifier);
+				else{
+					img.src = 'imgs/unknown.png';
+					img.className = "circle_img";
+				}
+				img.id = "img";
+				img.addEventListener("load", function(){
+					document.getElementsByTagName('img')[0].classList.add('hidden');
+					document.getElementsByClassName('img')[0].appendChild(img);
+
+					// veriica se o pokemon é Macho ou Fêmea para insirir o icone respectivo
+					infos.name = infos.name.replace('-', ' ');
+					name = infos.name.replace('Nidoran m', 'Nidoran <i class=\"fa fa-mars\"></i></span>');
+					name = name.replace('Nidoran f', 'Nidoran <i class=\"fa fa-venus\"></i></span>');
+					document.getElementsByClassName('name')[0].innerHTML = name
+					document.getElementsByClassName('hp')[0].innerHTML = "HP: " + infos.hp;
+					document.getElementsByClassName('attack')[0].innerHTML = "Attack: " + infos.attack;
+					document.getElementsByClassName('defense')[0].innerHTML = "Defense: " + infos.defense;
+					document.getElementsByClassName('speed')[0].innerHTML = "Speed: " + infos.speed;
+
+					// types
+					for(t in infos.types){
+						re = new RegExp("{type}", 'g');
+						document.getElementsByClassName('types')[0].innerHTML += type_html.replace(re, infos.types[t].name);
+					}
+
+				}, false);
+				// atualiza a descricao
+				if(infos.descriptions.length)
+					obtemDescricao(infos.descriptions[0].resource_uri);
+				else{
+					document.getElementsByClassName('description')[0].innerHTML = "Description:	<span>?????</span>"
+					falar("The information of this Pokémon are unknown.");
+				}
+
+			}
+		}
+		xmlHttp.open( "GET", 'http://pokeapi.co/api/v1/pokemon/' + identifier, true );
+		xmlHttp.send( null );
+	}
+
+
+	function obtemDescricao(url){
+	var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+				description = JSON.parse(xmlHttp.responseText);
+				document.getElementsByClassName('description')[0].innerHTML = "Description:	<span>" + description.description + "</span>";
+
+				falar(description.description);
+
+			}
+		}
+
+		xmlHttp.open( "GET", 'http://pokeapi.co/' + url, true );
+		xmlHttp.send( null );
+	}
+
+
+	function falar(description){
+		if(play == true){
+	  		window.speechSynthesis.cancel();
+			utterance = new SpeechSynthesisUtterance();
+
+		  	utterance.text = (infos.name == 'Nidoran f' ? 'Nidoran Female' : (infos.name == 'Nidoran m' ? 'Nidoram Male' : infos.name)) + ', a' + (['a','e','i','o','u'].indexOf(infos.types[0].name[0]) != -1 ? 'n ' : ' ') + infos.types[0].name + ( infos.types[1] ? " and a" + (['a','e','i','o','u'].indexOf(infos.types[1].name[0]) != -1 ? 'n ' : ' ') + infos.types[1].name : "" )+ ' pokemon. ' + description;
+		  	utterance.voice = 'Google US English';
+		  	utterance.lang = 'en-US';
+		  	utterance.rate = 1;
+		  	utterance.pitch = 0.3;
+			utterance.onend = function(){
+				document.getElementsByClassName('blue_circle')[0].classList.remove('voice-animated');
+			};
+			utterance.onstart = function(){
+				document.getElementsByClassName('blue_circle')[0].classList.add('voice-animated');
+			};
+			audio = new Audio('sounds/ding.mp3');
+			audio.play();
+			setTimeout(function(){
+			  	window.speechSynthesis.speak(utterance);
+			}, 500);
+		}
+	}
+
+
+	// insere todos os pokemons na listagem, por ordem de ID
+	function insere_pokemons(dicionario){
+		dicionario.pokemon.sort(function(a, b) {
+		    return parseInt(a.resource_uri.split("/")[3]) - parseInt(b.resource_uri.split("/")[3]);
+		});
+
+		string = "";
+		// preenche a div list_pokemon com elementos 'pokemon'
+		for(p in dicionario.pokemon){
+			aux = pokemon_html;
+
+			// replace do id
+			re = new RegExp("{id}", 'g');
+			id = dicionario.pokemon[p].resource_uri.split('/')[3];
+			aux = aux.replace('{id}', (id.length<=3 ? ("00" + id).slice(-3) : ("00" + id).slice(-5)));
+			aux = aux.replace('{id}', (id.length<=3 ? ("00" + id).slice(-3) : "- - -" ));
+
+			//replace do nome
+			aux = aux.replace("{nome}", dicionario.pokemon[p].name.replace("-", " "));
+
+			// veriica se o pokemon é Macho ou Fêmea para insirir o icone respectivo
+			aux = aux.replace(' m</span>', ' <i class=\"fa fa-mars\"></i></span>');
+			aux = aux.replace(' f</span>', ' <i class=\"fa fa-venus\"></i></span>');
+
+			string += aux;
+		}
+
+		// insere os pokemons na lista
+		document.getElementsByClassName('list_pokemon')[0].innerHTML = string;
+		document.getElementsByClassName('pokemon')[0].classList.add('selected');
+		adicionaClick();
+		
+
+		// encerra o loop do loading
+		clearInterval(interval);
+	}
+
+
+	
+function abrir(e){
+	op.volume = 0.2;
+	e.stopPropagation();
+	window.speechSynthesis.cancel();
+	document.getElementsByClassName('back-right-block')[0].classList.toggle("translateNormal");
+	setTimeout(function(){
+		document.getElementsByClassName('back-right-back')[0].classList.toggle('zindex');
+		lista = document.querySelectorAll('.getHide');/*
+		console.log(lista);*/
+		for(l=0; l < lista.length; l++){
+			/*console.log(lista[l]);*/
+			lista[l].classList.toggle('hide');
+		}
+	}, 500);
+
+	// ao iniciar a página, da o efeito de tela ligando e exibe os dados do pokemon de codigo 001
+	setTimeout(function(){
+		document.getElementsByClassName('shadow')[0].classList.remove('shadow');
+
+		// insere os dados do primeiro pokemon
+		consultaPokemon("001");
+	},3000);
+}
+
+document.querySelector('.back-right svg').onclick = abrir;
+document.querySelector('.back-right').onclick = abrir;
+document.querySelector('.back-right-back').onclick = abrir;
+
+</script>
+</body>
+</html>
